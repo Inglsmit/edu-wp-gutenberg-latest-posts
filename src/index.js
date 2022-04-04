@@ -1,4 +1,9 @@
-import { __ } from '@wordpress/i18n';
-import './editor.scss';
+import { registerBlockType } from '@wordpress/blocks';
+import './style.scss';
+import Edit from './edit';
+import save from './save';
 
-alert(__('Loaded!'));
+registerBlockType('blocks-course/edu-latest-posts', {
+	edit: Edit,
+	save,
+});
